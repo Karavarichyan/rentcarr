@@ -1,40 +1,49 @@
-import React from "react";
-import { Container, Row, Col } from "reactstrap";
-import Helmet from "../components/Helmet/Helmet";
-import CommonSection from "../components/UI/CommonSection";
-import CarItem from "../components/UI/CarItem";
-import carData from "../assets/data/carData";
+import React from 'react'
 
 const CarListing = () => {
   return (
-    <Helmet title="Cars">
-      <CommonSection title="Car Listing" />
+    <div>CarListing</div>
+  )
+}
 
-      <section>
-        <Container>
-          <Row>
-            <Col lg="12">
-              <div className=" d-flex align-items-center gap-3 mb-5">
-                <span className=" d-flex align-items-center gap-2">
-                  <i class="ri-sort-asc"></i> Sort By
-                </span>
+export default CarListing
+// import React from "react";
+// import { Container, Row, Col } from "reactstrap";
+// import Helmet from "../components/Helmet/Helmet";
+// import CommonSection from "../components/UI/CommonSection";
+// import CarItem from "../components/UI/CarItem";
+// import carData from "../assets/data/carData";
 
-                <select>
-                  <option>Select</option>
-                  <option value="low">Low to High</option>
-                  <option value="high">High to Low</option>
-                </select>
-              </div>
-            </Col>
+// const CarListing = () => {
+//   return (
+//     <Helmet title="Cars">
+//       <CommonSection title="Car Listing" />
 
-            {carData.map((item) => (
-              <CarItem item={item} key={item.id} />
-            ))}
-          </Row>
-        </Container>
-      </section>
-    </Helmet>
-  );
-};
+//       <section>
+//         <Container>
+//           <Row>
+//             <Col lg="12">
+//               <div className=" d-flex align-items-center gap-3 mb-5">
+//                 <span className=" d-flex align-items-center gap-2">
+//                   <i class="ri-sort-asc"></i> Sort By
+//                 </span>
 
-export default CarListing;
+//                 <select>
+//                   <option>Select</option>
+//                   <option value="low">Low to High</option>
+//                   <option value="high">High to Low</option>
+//                 </select>
+//               </div>
+//             </Col>
+
+//             {carData.map((item) => (
+//               <CarItem item={item} key={item.id} />
+//             ))}
+//           </Row>
+//         </Container>
+//       </section>
+//     </Helmet>
+//   );
+// };
+
+// export default CarListing;
