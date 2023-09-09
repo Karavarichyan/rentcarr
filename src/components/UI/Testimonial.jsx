@@ -1,3 +1,4 @@
+
 import React from "react";
 import Slider from "react-slick";
 
@@ -42,17 +43,14 @@ const Testimonial = () => {
     <Slider {...settings}>
       <div className="testimonial py-4 px-3">
         <p className="section__description">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus magni
-          explicabo molestias recusandae repudiandae, dolor, sapiente placeat
-          ab, animi eum minima nulla facere aliquam aut vitae quo pariatur
-          voluptate odit?
+        I recently purchased the Nissan Mercielago Model-2022, and I must say it exceeded all my expectations. The combination of luxury, performance, and advanced features is simply outstanding. The heated seats make driving in the winter a pleasure, and the GPS navigation system is incredibly accurate. I highly recommend this car to anyone looking for a top-notch driving experience.
         </p>
 
         <div className="mt-3 d-flex align-items-center gap-4">
           <img src={ava01} alt="" className="w-25 h-25 rounded-2" />
 
           <div>
-            <h6 className="mb-0 mt-3">Jhon Doe</h6>
+            <h6 className="mb-0 mt-3">Anastas</h6>
             <p className="section__description">Customer</p>
           </div>
         </div>
@@ -60,17 +58,14 @@ const Testimonial = () => {
 
       <div className="testimonial py-4 px-3">
         <p className="section__description">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus magni
-          explicabo molestias recusandae repudiandae, dolor, sapiente placeat
-          ab, animi eum minima nulla facere aliquam aut vitae quo pariatur
-          voluptate odit?
+        The Ferrari Camry Model-2022 is a true masterpiece. It's not just a car; it's a work of art on wheels. The sleek design and powerful performance make every drive an exhilarating experience. The automatic transmission and fuel efficiency are a perfect match, and the GPS navigation system has never let me down. If you want to turn heads and enjoy a thrilling ride, this is the car for you.
         </p>
 
         <div className="mt-3 d-flex align-items-center gap-4">
           <img src={ava02} alt="" className="w-25 h-25 rounded-2" />
 
           <div>
-            <h6 className="mb-0 mt-3">Jhon Doe</h6>
+            <h6 className="mb-0 mt-3">Karine</h6>
             <p className="section__description">Customer</p>
           </div>
         </div>
@@ -78,17 +73,14 @@ const Testimonial = () => {
 
       <div className="testimonial py-4 px-3">
         <p className="section__description">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus magni
-          explicabo molestias recusandae repudiandae, dolor, sapiente placeat
-          ab, animi eum minima nulla facere aliquam aut vitae quo pariatur
-          voluptate odit?
+        I can't say enough good things about the Mercedes Benz XC90 Model-2022. It's the ultimate luxury SUV with all the bells and whistles. The attention to detail in the interior is remarkable, and the technology is top-notch. The GPS navigation system is incredibly user-friendly, and the heated seats are a game-changer during the winter months. It's a dream car that I'm proud to own.
         </p>
 
         <div className="mt-3 d-flex align-items-center gap-4">
           <img src={ava03} alt="" className="w-25 h-25 rounded-2" />
 
           <div>
-            <h6 className="mb-0 mt-3">Jhon Doe</h6>
+            <h6 className="mb-0 mt-3">Stas</h6>
             <p className="section__description">Customer</p>
           </div>
         </div>
@@ -96,17 +88,14 @@ const Testimonial = () => {
 
       <div className="testimonial py-4 px-3">
         <p className="section__description">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus magni
-          explicabo molestias recusandae repudiandae, dolor, sapiente placeat
-          ab, animi eum minima nulla facere aliquam aut vitae quo pariatur
-          voluptate odit?
+        I recently purchased the BMW X3 Model-2022, and I couldn't be happier with my choice. It's the perfect combination of luxury and performance. The heated seats are a lifesaver during cold winters, and the GPS navigation system has been incredibly reliable. This car has exceeded my expectations in every way, and I highly recommend it to anyone looking for a top-tier driving experience.
         </p>
 
         <div className="mt-3 d-flex align-items-center gap-4">
           <img src={ava04} alt="" className="w-25 h-25 rounded-2" />
 
           <div>
-            <h6 className="mb-0 mt-3">Jhon Doe</h6>
+            <h6 className="mb-0 mt-3">Narine</h6>
             <p className="section__description">Customer</p>
           </div>
         </div>

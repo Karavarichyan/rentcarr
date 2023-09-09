@@ -1,132 +1,130 @@
-import React from 'react'
+import React, { useEffect } from "react";
+
+import carData from "../assets/data/carData";
+import { Container, Row, Col } from "reactstrap";
+import Helmet from "../components/Helmet/Helmet";
+import { useParams } from "react-router-dom";
+import BookingForm from "../components/UI/BookingForm";
+// import PaymentMethod from "../components/UI/PaymentMethod";
 
 const CarDetails = () => {
+  const { slug } = useParams();
+
+  const singleCarItem = carData.find((item) => item.carName === slug);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [singleCarItem]);
+
   return (
-    <div>CarDetails</div>
-  )
-}
+    <Helmet title={singleCarItem.carName}>
+      <section>
+        <Container>
+          <Row>
+            <Col lg="6">
+              <img src={singleCarItem.imgUrl} alt="" className="w-100" />
+            </Col>
 
-export default CarDetails
-// import React, { useEffect } from "react";
-// import { Container, Row, Col, Form, FormGroup, Input } from "reactstrap";
+            <Col lg="6">
+              <div className="car__info">
+                <h2 className="section__title">{singleCarItem.carName}</h2>
 
-// import { useParams } from "react-router-dom";
-// import blogData from "../assets/data/blogData.js";
-// import Helmet from "../components/Helmet/Helmet";
-// import { Link } from "react-router-dom";
+                <div className=" d-flex align-items-center gap-5 mb-4 mt-3">
+                  <h6 className="rent__price fw-bold fs-4">
+                    ${singleCarItem.price}.00 / Day
+                  </h6>
 
-// import commentImg from "../assets/all-images/ava-1.jpg";
+                  <span className=" d-flex align-items-center gap-2">
+                    <span style={{ color: "#f9a826" }}>
+                      <i class="ri-star-s-fill"></i>
+                      <i class="ri-star-s-fill"></i>
+                      <i class="ri-star-s-fill"></i>
+                      <i class="ri-star-s-fill"></i>
+                      <i class="ri-star-s-fill"></i>
+                    </span>
+                    ({singleCarItem.rating} ratings)
+                  </span>
+                </div>
 
-// import "../styles/blog-details.css";
+                <p className="section__description">
+                  {singleCarItem.description}
+                </p>
 
-// const BlogDetails = () => {
-//   const { slug } = useParams();
-//   const blog = blogData.find((blog) => blog.title === slug);
+                <div
+                  className=" d-flex align-items-center mt-3"
+                  style={{ columnGap: "4rem" }}
+                >
+                  <span className=" d-flex align-items-center gap-1 section__description">
+                    <i
+                      class="ri-roadster-line"
+                      style={{ color: "#f9a826" }}
+                    ></i>{" "}
+                    {singleCarItem.model}
+                  </span>
 
-//   useEffect(() => {
-//     window.scrollTo(0, 0);
-//   }, [blog]);
+                  <span className=" d-flex align-items-center gap-1 section__description">
+                    <i
+                      class="ri-settings-2-line"
+                      style={{ color: "#f9a826" }}
+                    ></i>{" "}
+                    {singleCarItem.automatic}
+                  </span>
 
-//   return (
-//     <Helmet title={blog.title}>
-//       <section>
-//         <Container>
-//           <Row>
-//             <Col lg="8" md="8">
-//               <div className="blog__details">
-//                 <img src={blog.imgUrl} alt="" className="w-100" />
-//                 <h2 className="section__title mt-4">{blog.title}</h2>
+                  <span className=" d-flex align-items-center gap-1 section__description">
+                    <i
+                      class="ri-timer-flash-line"
+                      style={{ color: "#f9a826" }}
+                    ></i>{" "}
+                    {singleCarItem.speed}
+                  </span>
+                </div>
 
-//                 <div className="blog__publisher d-flex align-items-center gap-4 mb-4">
-//                   <span className="blog__author">
-//                     <i class="ri-user-line"></i> {blog.author}
-//                   </span>
+                <div
+                  className=" d-flex align-items-center mt-3"
+                  style={{ columnGap: "2.8rem" }}
+                >
+                  <span className=" d-flex align-items-center gap-1 section__description">
+                    <i class="ri-map-pin-line" style={{ color: "#f9a826" }}></i>{" "}
+                    {singleCarItem.gps}
+                  </span>
 
-//                   <span className=" d-flex align-items-center gap-1 section__description">
-//                     <i class="ri-calendar-line"></i> {blog.date}
-//                   </span>
+                  <span className=" d-flex align-items-center gap-1 section__description">
+                    <i
+                      class="ri-wheelchair-line"
+                      style={{ color: "#f9a826" }}
+                    ></i>{" "}
+                    {singleCarItem.seatType}
+                  </span>
 
-//                   <span className=" d-flex align-items-center gap-1 section__description">
-//                     <i class="ri-time-line"></i> {blog.time}
-//                   </span>
-//                 </div>
+                  <span className=" d-flex align-items-center gap-1 section__description">
+                    <i
+                      class="ri-building-2-line"
+                      style={{ color: "#f9a826" }}
+                    ></i>{" "}
+                    {singleCarItem.brand}
+                  </span>
+                </div>
+              </div>
+            </Col>
 
-//                 <p className="section__description">{blog.description}</p>
-//                 <h6 className="ps-5 fw-normal">
-//                   <blockquote className="fs-4">{blog.quote}</blockquote>
-//                 </h6>
-//                 <p className="section__description">{blog.description}</p>
-//               </div>
+            <Col lg="7" className="mt-5">
+              <div className="booking-info mt-5">
+                <h5 className="mb-4 fw-bold ">Booking Information</h5>
+                <BookingForm />
+              </div>
+            </Col>
 
-//               <div className="comment__list mt-5">
-//                 <h4 className="mb-5">3 Comments</h4>
+            <Col lg="5" className="mt-5">
+              <div className="payment__info mt-5">
+                <h5 className="mb-4 fw-bold ">Payment Information</h5>
+                {/* <PaymentMethod /> */}
+              </div>
+            </Col>
+          </Row>
+        </Container>
+      </section>
+    </Helmet>
+  );
+};
 
-//                 <div className="single__comment d-flex gap-3">
-//                   <img src={commentImg} alt="" />
-//                   <div className="comment__content">
-//                     <h6 className=" fw-bold">David Visa</h6>
-//                     <p className="section__description mb-0">14 July, 2022</p>
-//                     <p className="section__description">
-//                       Lorem ipsum dolor sit amet consectetur adipisicing elit.
-//                       Eos nobis totam eius laborum molestias itaque minima
-//                       distinctio, quae velit tempore!
-//                     </p>
-
-//                     <span className="replay d-flex align-items-center gap-1">
-//                       <i class="ri-reply-line"></i> Replay
-//                     </span>
-//                   </div>
-//                 </div>
-
-//                 {/* =============== comment form ============ */}
-//                 <div className="leave__comment-form mt-5">
-//                   <h4>Leave a Comment</h4>
-//                   <p className="section__description">
-//                     You must sign-in to make or comment a post
-//                   </p>
-
-//                   <Form>
-//                     <FormGroup className=" d-flex gap-3">
-//                       <Input type="text" placeholder="Full name" />
-//                       <Input type="email" placeholder="Email" />
-//                     </FormGroup>
-
-//                     <FormGroup>
-//                       <textarea
-//                         rows="5"
-//                         className="w-100 py-2 px-3"
-//                         placeholder="Comment..."
-//                       ></textarea>
-//                     </FormGroup>
-
-//                     <button className="btn comment__btn mt-3">
-//                       Post a Comment
-//                     </button>
-//                   </Form>
-//                 </div>
-//               </div>
-//             </Col>
-
-//             <Col lg="4" md="4">
-//               <div className="recent__post mb-4">
-//                 <h5 className=" fw-bold">Recent Posts</h5>
-//               </div>
-//               {blogData.map((item) => (
-//                 <div className="recent__blog-post mb-4" key={item.id}>
-//                   <div className="recent__blog-item d-flex gap-3">
-//                     <img src={item.imgUrl} alt="" className="w-25 rounded-2" />
-//                     <h6>
-//                       <Link to={`/blogs/${item.title}`}>{blog.title}</Link>
-//                     </h6>
-//                   </div>
-//                 </div>
-//               ))}
-//             </Col>
-//           </Row>
-//         </Container>
-//       </section>
-//     </Helmet>
-//   );
-// };
-
-// export default BlogDetails;
+export default CarDetails;

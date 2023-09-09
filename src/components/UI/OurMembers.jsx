@@ -1,3 +1,4 @@
+
 import React from "react";
 import "../../styles/our-member.css";
 import { Col } from "reactstrap";
@@ -8,7 +9,7 @@ import ava03 from "../../assets/all-images/ava-3.jpg";
 
 const OUR__MEMBERS = [
   {
-    name: "Jhon Doe",
+    name: "Jhoni",
     experience: "5 years of experience",
     fbUrl: "#",
     instUrl: "#",
@@ -18,7 +19,7 @@ const OUR__MEMBERS = [
   },
 
   {
-    name: "David Lisa",
+    name: "Kiti ",
     experience: "5 years of experience",
     fbUrl: "#",
     instUrl: "#",
@@ -28,7 +29,7 @@ const OUR__MEMBERS = [
   },
 
   {
-    name: "Hilton King",
+    name: "Andre",
     experience: "5 years of experience",
     fbUrl: "#",
     instUrl: "#",
@@ -38,7 +39,7 @@ const OUR__MEMBERS = [
   },
 
   {
-    name: "Jhon Doe",
+    name: "Maicl",
     experience: "5 years of experience",
     fbUrl: "#",
     instUrl: "#",
