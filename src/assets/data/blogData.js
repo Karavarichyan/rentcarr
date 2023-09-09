@@ -4,6 +4,7 @@ import img01 from "../all-images/blog-img/blog-1.jpg";
 import img02 from "../all-images/blog-img/blog-2.jpg";
 import img03 from "../all-images/blog-img/blog-3.jpg";
 
+
 const blogData = [
   {
     id: 1,
@@ -40,6 +41,18 @@ const blogData = [
     imgUrl: img03,
     description:
       " Discover the art of gifting a memorable trip to your loved ones in this blog. We'll share creative ideas and practical tips on how to plan the perfect getaway or road trip as a thoughtful and unforgettable present, making someone's special occasion even more extraordinary.",
+    quote:
+      "Life is not about waiting for the storm to pass, but about learning to dance in the rain.' - Unknown",
+  },
+  {
+    id: 4,
+    title: "The best way to drive cars",
+    author: "Narek",
+    date: "12 Dec, 2022",
+    time: "9am",
+    imgUrl: img01,
+    description:
+      " In this blog, we explore the best practices and tips for becoming a skilled and responsible driver. From defensive driving techniques to maintaining your vehicle, we'll discuss the key aspects that contribute to safe and enjoyable driving experiences.",
     quote:
       "Life is not about waiting for the storm to pass, but about learning to dance in the rain.' - Unknown",
   },

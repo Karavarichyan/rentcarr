@@ -1,12 +1,4 @@
-// import React from 'react'
 
-// const BecomedDriverSection = () => {
-//   return (
-//     <div>BecomedDriverSection</div>
-//   )
-// }
-
-// export default BecomedDriverSection
 
 import React from "react";
 import "../../styles/become-driver.css";

@@ -8,6 +8,8 @@ import ava01 from "../../assets/all-images/ava-1.jpg";
 import ava02 from "../../assets/all-images/ava-2.jpg";
 import ava03 from "../../assets/all-images/ava-3.jpg";
 import ava04 from "../../assets/all-images/ava-4.jpg";
+// import ava05 from "../all-images/slider-img/narek_g.jpg";
+import ava05 from "../../assets/all-images/slider-img/narek_g.jpg"
 
 const Testimonial = () => {
   const settings = {
@@ -51,6 +53,27 @@ const Testimonial = () => {
 
           <div>
             <h6 className="mb-0 mt-3">Anastas</h6>
+            <p className="section__description">Customer</p>
+          </div>
+        </div>
+      </div>
+
+      <div className="testimonial py-4 px-3">
+        <p className="section__description">
+        The 1997 BMW E36 is a timeless classic that seamlessly blends sportiness and everyday comfort. With its elegant design, this model still turns heads on the road today.
+
+Under the hood, it offers a range of engines, from fuel-efficient options to powerful performers. The six-cylinder versions stand out for their impressive performance and responsiveness.
+
+What truly sets the E36 apart is its handling – it's incredibly responsive and offers a confident grip on the road, making it a perfect choice for those who enjoy spirited driving.
+
+Inside, the E36 is known for its comfortable and ergonomic interior. Overall, it's a well-rounded car that continues to charm drivers with its blend of style, performance, and comfort.
+        </p>
+
+        <div className="mt-3 d-flex align-items-center gap-4">
+          <img src={ava05} alt="" className="w-25 h-25 rounded-2" />
+
+          <div>
+            <h6 className="mb-0 mt-3">Narek</h6>
             <p className="section__description">Customer</p>
           </div>
         </div>

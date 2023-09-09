@@ -8,6 +8,7 @@ import img06 from "../all-images/cars-img/mercedes-offer.png";
 import img07 from "../all-images/cars-img/audi.jpeg";
 import img08 from "../all-images/cars-img/roys.jpeg";
 import img09 from '../all-images/cars-img/niva.jpeg'
+import img10 from "../all-images/slider-img/nark.jpg"
 
 const carData = [
   { id: 9,
@@ -23,6 +24,22 @@ const carData = [
     automatic: "Automatic no",
     description:
       " Stylishly put, it's not advisable to drive a Niva, as it can be hazardous to your health."
+
+      
+  },
+  { id: 10,
+    brand: "BMW E-36",
+    rating: 52,
+    carName: "BMW E-36",
+    imgUrl: img10,
+    model: "E-36",
+    price: 100,
+    speed: "175kmpl",
+    gps: "GPS Navigation no",
+    seatType: "Heated seats yes",
+    automatic: "Automatic no",
+    description:
+      " BMW E36, which is a part of the BMW 3 Series, is a popular model that was produced from 1990 to 1999. The 1997 BMW E36 would be from the later years of its production cycle. Here's a brief overview:"
 
       
   },
